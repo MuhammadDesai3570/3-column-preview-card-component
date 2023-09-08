@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  background: var(--Very-light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+}
+
+article {
+  height: 28.125rem;
+  width: 17.375rem;
+  display: flex;
+  justify-content: center;
+}
+
+.article-one {
+  background-color: var(--Bright-orange);
+  border-radius: 7px 0 0 7px;
+  align-items: center;
+  animation-name: slide-in-left;
+  animation-duration: 1s;
+}
+
+.article-two {
+  background-color: var(--Dark-cyan);
+  align-items: center;
+  animation-name: slide-in-top;
+  animation-duration: 1s;
+}
+
+.article-three {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0 7px 7px 0;
+  align-items: center;
+  animation-name: slide-in-right;
+  animation-duration: 1s;
+}
+
+.column-one {
+  width: 75%;
+  height: 80%;
+}
+
+.column-two {
+  width: 75%;
+  height: 80%;
+}
+
+.column-three {
+  width: 75%;
+  height: 80%;
+}
+
+.column-one h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 32px;
+  color: var(--Very-light-gray);
+}
+
+.column-two h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 32px;
+  color: var(--Very-light-gray);
+}
+
+.column-three h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 32px;
+  color: var(--Very-light-gray);
+}
+
+.column-one p {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--Transparent-white);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.75;
+  letter-spacing: 0.5px;
+}
+
+.column-two p {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--Transparent-white);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.75;
+  letter-spacing: 0.5px;
+}
+
+.column-three p {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--Transparent-white);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.75;
+  letter-spacing: 0.4px;
+}
+
+button {
+  height: 3.125rem;
+  width: 9.375rem;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  margin-top: 45px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.column-one button {
+  color: var(--Bright-orange);
+}
+
+.column-two button {
+  color: var(--Dark-cyan);
+}
+
+.column-three button {
+  color: var(--Very-dark-cyan);
+}
+
+button:hover {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-top {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 375px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  article {
+    height: 28.125rem;
+    width: 15.75rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .article-one {
+    background-color: var(--Bright-orange);
+    border-radius: 7px 7px 0 0;
+    align-items: center;
+  }
+
+  .article-two {
+    background-color: var(--Dark-cyan);
+    align-items: center;
+  }
+
+  .article-three {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 0 7px 7px;
+    align-items: center;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
